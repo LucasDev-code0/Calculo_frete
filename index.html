@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Frete Estágio | UNINASSAU Parangaba</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =================================
+         HEADER
+    ================================== -->
+
+    <header class="header">
+
+        <div class="container nav">
+
+            <div class="logo">
+
+                <span>Frete</span>Estágio
+
+            </div>
+
+            <div class="location">
+
+                📍 UNINASSAU Parangaba
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =================================
+         HERO
+    ================================== -->
+
+    <section class="hero">
+
+        <div class="container hero-content">
+
+            <span class="tag">
+                CALCULADORA DE DISTÂNCIA
+            </span>
+
+            <h1>
+                Calcule o preço do seu
+                <span>frete de moto</span>
+            </h1>
+
+            <p>
+
+                Informe o CEP do destino e descubra
+                a distância aproximada até a UNINASSAU
+                Parangaba e uma estimativa do valor do frete.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================
+         CALCULADORA
+    ================================== -->
+
+    <main class="container">
+
+        <section class="calculator">
+
+            <div class="section-title">
+
+                <span>
+                    PASSO 1
+                </span>
+
+                <h2>
+                    Informe o CEP do destino
+                </h2>
+
+                <p>
+                    Digite um CEP brasileiro para consultar o endereço.
+                </p>
+
+            </div>
+
+
+            <form id="cepForm">
+
+                <div class="cep-input">
+
+                    <input
+                        type="text"
+                        id="cep"
+                        placeholder="Ex: 60740-020"
+                        maxlength="9"
+                        required
+                    >
+
+                    <button type="submit">
+                        Consultar CEP
+                    </button>
+
+                </div>
+
+            </form>
+
+
+            <!-- =================================
+                 ENDEREÇO
+            ================================== -->
+
+            <div
+                id="enderecoBox"
+                class="endereco-box hidden"
+            >
+
+                <div class="address-icon">
+                    📍
+                </div>
+
+                <div>
+
+                    <span>
+                        DESTINO ENCONTRADO
+                    </span>
+
+                    <h3 id="endereco">
+                        -
+                    </h3>
+
+                    <p id="bairro">
+                        -
+                    </p>
+
+                    <p id="cidade">
+                        -
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================
+                 LOADING
+            ================================== -->
+
+            <div
+                id="loading"
+                class="loading hidden"
+            >
+
+                <div class="spinner"></div>
+
+                <p>
+                    Calculando distância...
+                </p>
+
+            </div>
+
+
+            <!-- =================================
+                 RESULTADO
+            ================================== -->
+
+            <div
+                id="resultado"
+                class="resultado hidden"
+            >
+
+                <div class="section-title">
+
+                    <span>
+                        RESULTADO
+                    </span>
+
+                    <h2>
+                        Estimativa do frete
+                    </h2>
+
+                </div>
+
+
+                <div class="result-grid">
+
+
+                    <!-- DISTÂNCIA -->
+
+                    <div class="result-card">
+
+                        <div class="result-icon">
+                            📏
+                        </div>
+
+                        <span>
+                            DISTÂNCIA
+                        </span>
+
+                        <strong id="distancia">
+                            0 km
+                        </strong>
+
+                        <small>
+                            Pela rota de carro/moto
+                        </small>
+
+                    </div>
+
+
+                    <!-- TEMPO -->
+
+                    <div class="result-card">
+
+                        <div class="result-icon">
+                            ⏱️
+                        </div>
+
+                        <span>
+                            TEMPO ESTIMADO
+                        </span>
+
+                        <strong id="tempo">
+                            0 min
+                        </strong>
+
+                        <small>
+                            Tempo aproximado da rota
+                        </small>
+
+                    </div>
+
+
+                    <!-- UBER MOTO -->
+
+                    <div class="result-card destaque">
+
+                        <div class="result-icon">
+                            🛵
+                        </div>
+
+                        <span>
+                            UBER MOTO
+                        </span>
+
+                        <strong id="uberValor">
+                            R$ 0,00
+                        </strong>
+
+                        <small>
+                            Estimativa, não é tarifa oficial
+                        </small>
+
+                    </div>
+
+
+                    <!-- FRETE -->
+
+                    <div class="result-card frete">
+
+                        <div class="result-icon">
+                            📦
+                        </div>
+
+                        <span>
+                            PREÇO DO FRETE
+                        </span>
+
+                        <strong id="freteValor">
+                            R$ 0,00
+                        </strong>
+
+                        <small>
+                            Valor estimado
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <!-- DETALHES -->
+
+                <div class="formula">
+
+                    <h3>
+                        Como o valor é calculado?
+                    </h3>
+
+                    <p>
+                        O sistema utiliza uma tarifa-base e um
+                        valor estimado por quilômetro para calcular
+                        o preço da viagem.
+                    </p>
+
+                    <div class="formula-box">
+
+                        <span>
+                            Tarifa base
+                        </span>
+
+                        <strong>
+                            R$ 5,00
+                        </strong>
+
+                    </div>
+
+                    <div class="formula-box">
+
+                        <span>
+                            Valor por KM
+                        </span>
+
+                        <strong>
+                            R$ 2,00
+                        </strong>
+
+                    </div>
+
+                    <div class="formula-box total">
+
+                        <span>
+                            Fórmula
+                        </span>
+
+                        <strong>
+                            Base + (KM × valor/km)
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="disclaimer">
+
+                    ⚠️
+                    <p>
+                        O valor exibido é apenas uma estimativa
+                        para fins de cálculo. A tarifa real do Uber
+                        pode variar conforme horário, demanda,
+                        disponibilidade e outros fatores.
+                    </p>
+
+                </div>
+
+
+                <button
+                    id="novoCalculo"
+                    class="btn-secondary"
+                >
+                    Fazer novo cálculo
+                </button>
+
+            </div>
+
+
+            <!-- ERRO -->
+
+            <div
+                id="erro"
+                class="erro hidden"
+            >
+                <span>⚠️</span>
+
+                <p id="mensagemErro">
+                    Não foi possível realizar a consulta.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =================================
+         FOOTER
+    ================================== -->
+
+    <footer>
+
+        <div class="container">
+
+            <div class="logo">
+
+                <span>Frete</span>Estágio
+
+            </div>
+
+            <p>
+                Calculadora de distância e estimativa
+                de frete a partir da UNINASSAU Parangaba.
+            </p>
+
+            <small>
+                Projeto acadêmico.
+            </small>
+
+        </div>
+
+    </footer>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

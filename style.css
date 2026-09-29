@@ -1,0 +1,855 @@
+/* =================================
+   RESET
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: #f5f7fb;
+
+    color: #172033;
+
+    line-height: 1.6;
+
+}
+
+
+/* =================================
+   CONTAINER
+================================= */
+
+.container {
+
+    width: 90%;
+
+    max-width: 1100px;
+
+    margin: auto;
+
+}
+
+
+/* =================================
+   HEADER
+================================= */
+
+.header {
+
+    background: #ffffff;
+
+    border-bottom:
+        1px solid #e5e9f0;
+
+}
+
+
+.nav {
+
+    min-height: 75px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+
+.logo {
+
+    font-size: 25px;
+
+    font-weight: 800;
+
+    color: #172033;
+
+}
+
+
+.logo span {
+
+    color: #2563eb;
+
+}
+
+
+.location {
+
+    color: #687386;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+}
+
+
+/* =================================
+   HERO
+================================= */
+
+.hero {
+
+    background:
+        linear-gradient(
+            135deg,
+            #eff6ff,
+            #ffffff
+        );
+
+    padding: 80px 0;
+
+    text-align: center;
+
+}
+
+
+.hero-content {
+
+    max-width: 800px;
+
+}
+
+
+.tag {
+
+    display: inline-block;
+
+    color: #2563eb;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.hero h1 {
+
+    font-size: 48px;
+
+    line-height: 1.1;
+
+    margin-bottom: 20px;
+
+}
+
+
+.hero h1 span {
+
+    color: #2563eb;
+
+}
+
+
+.hero p {
+
+    color: #69758a;
+
+    font-size: 17px;
+
+    max-width: 700px;
+
+    margin: auto;
+
+}
+
+
+/* =================================
+   CALCULATOR
+================================= */
+
+.calculator {
+
+    background: #ffffff;
+
+    margin:
+        -40px auto
+        80px;
+
+    position: relative;
+
+    border-radius: 20px;
+
+    padding: 45px;
+
+    box-shadow:
+        0 15px 50px
+        rgba(24, 39, 75, 0.10);
+
+}
+
+
+.section-title {
+
+    margin-bottom: 25px;
+
+}
+
+
+.section-title > span {
+
+    color: #2563eb;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+}
+
+
+.section-title h2 {
+
+    font-size: 28px;
+
+    margin: 5px 0;
+
+}
+
+
+.section-title p {
+
+    color: #738096;
+
+}
+
+
+/* =================================
+   CEP
+================================= */
+
+.cep-input {
+
+    display: grid;
+
+    grid-template-columns: 1fr 180px;
+
+    gap: 12px;
+
+}
+
+
+.cep-input input {
+
+    width: 100%;
+
+    padding: 16px;
+
+    border:
+        1px solid #dce2ea;
+
+    border-radius: 10px;
+
+    outline: none;
+
+    font-size: 16px;
+
+}
+
+
+.cep-input input:focus {
+
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(37, 99, 235, 0.08);
+
+}
+
+
+.cep-input button {
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+.cep-input button:hover {
+
+    background: #1d4ed8;
+
+    transform: translateY(-1px);
+
+}
+
+
+/* =================================
+   ENDEREÇO
+================================= */
+
+.endereco-box {
+
+    display: flex;
+
+    gap: 18px;
+
+    align-items: center;
+
+    background: #eff6ff;
+
+    border: 1px solid #dbeafe;
+
+    padding: 20px;
+
+    margin-top: 25px;
+
+    border-radius: 12px;
+
+}
+
+
+.address-icon {
+
+    width: 50px;
+
+    height: 50px;
+
+    border-radius: 10px;
+
+    background: #2563eb;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 22px;
+
+}
+
+
+.endereco-box span {
+
+    color: #2563eb;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+}
+
+
+.endereco-box h3 {
+
+    font-size: 17px;
+
+}
+
+
+.endereco-box p {
+
+    color: #667085;
+
+    font-size: 13px;
+
+}
+
+
+/* =================================
+   LOADING
+================================= */
+
+.loading {
+
+    text-align: center;
+
+    padding: 40px;
+
+}
+
+
+.spinner {
+
+    width: 35px;
+
+    height: 35px;
+
+    margin:
+        0 auto
+        12px;
+
+    border:
+        4px solid #e5e7eb;
+
+    border-top-color: #2563eb;
+
+    border-radius: 50%;
+
+    animation:
+        girar 0.8s linear infinite;
+
+}
+
+
+@keyframes girar {
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+/* =================================
+   RESULTADO
+================================= */
+
+.resultado {
+
+    margin-top: 45px;
+
+}
+
+
+.result-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 15px;
+
+}
+
+
+.result-card {
+
+    padding: 25px 20px;
+
+    border:
+        1px solid #e6eaf0;
+
+    border-radius: 14px;
+
+    background: #ffffff;
+
+}
+
+
+.result-card.destaque {
+
+    background: #eff6ff;
+
+    border-color: #bfdbfe;
+
+}
+
+
+.result-card.frete {
+
+    background: #2563eb;
+
+    color: white;
+
+    border-color: #2563eb;
+
+}
+
+
+.result-icon {
+
+    font-size: 25px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.result-card span {
+
+    display: block;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    color: #7b8494;
+
+    letter-spacing: 1px;
+
+}
+
+
+.result-card.frete span {
+
+    color: #dbeafe;
+
+}
+
+
+.result-card strong {
+
+    display: block;
+
+    font-size: 25px;
+
+    margin: 5px 0;
+
+}
+
+
+.result-card small {
+
+    color: #8992a1;
+
+    font-size: 11px;
+
+}
+
+
+.result-card.frete small {
+
+    color: #dbeafe;
+
+}
+
+
+/* =================================
+   FÓRMULA
+================================= */
+
+.formula {
+
+    margin-top: 35px;
+
+    padding: 25px;
+
+    background: #f8fafc;
+
+    border-radius: 12px;
+
+}
+
+
+.formula h3 {
+
+    margin-bottom: 5px;
+
+}
+
+
+.formula p {
+
+    color: #707b8d;
+
+    font-size: 14px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.formula-box {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 12px 0;
+
+    border-bottom:
+        1px solid #e5e7eb;
+
+}
+
+
+.formula-box span {
+
+    color: #687386;
+
+}
+
+
+.formula-box strong {
+
+    color: #172033;
+
+}
+
+
+.formula-box.total {
+
+    border: none;
+
+    padding-bottom: 0;
+
+}
+
+
+/* =================================
+   AVISO
+================================= */
+
+.disclaimer {
+
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 20px;
+
+    padding: 15px;
+
+    background: #fff7ed;
+
+    border:
+        1px solid #fed7aa;
+
+    border-radius: 10px;
+
+    color: #9a5b13;
+
+    font-size: 12px;
+
+}
+
+
+.disclaimer p {
+
+    margin: 0;
+
+}
+
+
+/* =================================
+   BOTÃO NOVO CÁLCULO
+================================= */
+
+.btn-secondary {
+
+    width: 100%;
+
+    margin-top: 20px;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background: #172033;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-weight: 700;
+
+}
+
+
+.btn-secondary:hover {
+
+    background: #0f172a;
+
+}
+
+
+/* =================================
+   ERRO
+================================= */
+
+.erro {
+
+    display: flex;
+
+    gap: 12px;
+
+    align-items: center;
+
+    margin-top: 25px;
+
+    padding: 15px;
+
+    background: #fef2f2;
+
+    border:
+        1px solid #fecaca;
+
+    border-radius: 10px;
+
+    color: #b91c1c;
+
+    font-size: 14px;
+
+}
+
+
+/* =================================
+   FOOTER
+================================= */
+
+footer {
+
+    background: #111827;
+
+    color: white;
+
+    padding: 40px 0;
+
+}
+
+
+footer .logo {
+
+    color: white;
+
+    margin-bottom: 10px;
+
+}
+
+
+footer p {
+
+    color: #9ca3af;
+
+    max-width: 500px;
+
+    margin-bottom: 10px;
+
+}
+
+
+footer small {
+
+    color: #6b7280;
+
+}
+
+
+/* =================================
+   UTILITÁRIO
+================================= */
+
+.hidden {
+
+    display: none !important;
+
+}
+
+
+/* =================================
+   RESPONSIVO
+================================= */
+
+@media (max-width: 850px) {
+
+    .hero h1 {
+
+        font-size: 40px;
+
+    }
+
+
+    .result-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .location {
+
+        display: none;
+
+    }
+
+
+    .hero {
+
+        padding: 60px 0;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 34px;
+
+    }
+
+
+    .calculator {
+
+        padding: 25px;
+
+        margin-top: -25px;
+
+    }
+
+
+    .cep-input {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .cep-input button {
+
+        padding: 15px;
+
+    }
+
+
+    .result-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .endereco-box {
+
+        align-items: flex-start;
+
+    }
+
+}
